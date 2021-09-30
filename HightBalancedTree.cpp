@@ -14,6 +14,8 @@ class Node{
      }
 };
 
+//checking the hight of the tree
+
 int height(Node * root){
     if(root==NULL){
         return 0;
@@ -23,6 +25,8 @@ int height(Node * root){
     return max(lh,rh)+1;
 }
 
+//Brout force approch to solve the problem 
+//Time complexity with this approch is O(N*N);
 bool isBalanced(Node* root){
     if(root == NULL){
         return true;
@@ -42,6 +46,7 @@ bool isBalanced(Node* root){
         return false;
     }
 }
+//Printing the tree in inorder 
 
 void inorder(Node* root){
     if(root == NULL){
@@ -51,6 +56,9 @@ void inorder(Node* root){
     cout << root->data << " ";
     inorder(root->right);
 }
+
+//Optimized code to solved the question
+// Time complexity of the question with this approch is O(n);
 bool isBalnced1(Node* root , int* height){
     if(root == NULL){
         return true;
